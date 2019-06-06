@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean id="ac1" class="com.ssi.Account">
+	<property name="ano" value="A1111"/>
+	<property name="atype" value="Saving"/>
+	<property name="bank" value="SBI"/>
+</bean>
+    
+<bean id="account" class="com.ssi.Account">
+	<property name="ano" value="A2222"/>
+	<property name="atype" value="Saving"/>
+	<property name="bank" value="ICICI"/>
+</bean>    
+
+<bean id="cust1" class="com.ssi.Customer" autowire="byName">
+	<property name="code" value="C111"/>
+	<property name="cname" value="ABCD"/>
+</bean>    
+    
+<!--     
+<bean id="ac1" class="com.ssi.Account">
+	<property name="ano" value="A1111"/>
+	<property name="atype" value="Saving"/>
+	<property name="bank" value="SBI"/>
+</bean>    
+<bean id="ac2" class="com.ssi.Account">
+	<property name="ano" value="A2222"/>
+	<property name="atype" value="Saving"/>
+	<property name="bank" value="ICICI"/>
+</bean>    
+<bean id="ac3" class="com.ssi.Account">
+	<property name="ano" value="A3333"/>
+	<property name="atype" value="Loan"/>
+	<property name="bank" value="HDFC"/>
+</bean>    
+
+
+
+<bean id="e1" class="com.ssi.Employee">
+	<property name="eno" value="111"/>
+	<property name="ename" value="ABC"/>
+	
+	<property name="accounts">
+		<list>
+			<ref bean="ac1"/>
+			<ref bean="ac2"/>
+			<ref bean="ac3"/>
+		</list>
+	</property>
+	
+	<property name="projects">
+		<props>
+			<prop key="P101">ERP</prop>
+			<prop key="P153">ECommerce</prop>
+		</props>
+	</property>
+	<property name="fmembers">
+		<map>
+			<entry key="father" value="XYZ"/>
+			<entry key="mother" value="PQR"/>
+		</map>
+	</property>
+	
+	<property name="mobiles">
+		<set>
+			<value>9826012345</value>
+			<value>9425033445</value>
+		</set>
+	</property>
+	
+	<property name="addresses">
+		<list>
+			<value>Palasia,Indore</value>
+			<value>NewMarket,Bhopal</value>
+			<value>Andheri,Mumbai</value>
+		</list>
+	</property>
+ </bean>
+-->
+	
+</beans>
+
